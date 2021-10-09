@@ -42,11 +42,7 @@ namespace Lab3
             }
             catch (KumachevException exception)
             {
-                if (exception is NotAnEquationException)
-                    logger.Log("Program: определено, что такое уравнение не существует");
-
-                if (exception is NegativeDescriminantException)
-                    logger.Log("Program: Ошибка - уравнение не имеет корней");
+                logger.Log(exception.Message);
             }
             finally
             {
