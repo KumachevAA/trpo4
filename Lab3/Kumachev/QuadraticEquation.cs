@@ -1,21 +1,22 @@
-﻿using Lab2.Exceptions;
+﻿using Lab.core;
+using Lab2.Exceptions;
 using System;
 using System.Collections.Generic;
 
 namespace Lab3.Kumachev
 {
-    public class QuadraticEquation : LinearEquation
+    public class QuadraticEquation : LinearEquation, EquationInterface
     {
         protected float D(float a, float b, float c)
         {
             return b * b - 4 * a * c;
         }
 
-        public override List<float> Solve(float a, float b, float c)
+        public List<float> Solve(float a, float b, float c)
         {
             if (a == 0)
             {
-                base.Solve(a, b, c);
+                Solve(a, b);
                 return X;
             }
 
