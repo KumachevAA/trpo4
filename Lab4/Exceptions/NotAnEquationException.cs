@@ -2,7 +2,7 @@
 
 namespace Lab2.Exceptions
 {
-    public class NotAnEquationException : Exception
+    public class NotAnEquationException : KumachevException
     {
         public NotAnEquationException()
         {

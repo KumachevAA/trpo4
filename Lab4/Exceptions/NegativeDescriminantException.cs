@@ -2,7 +2,7 @@
 
 namespace Lab2.Exceptions
 {
-    public class NegativeDescriminantException : Exception
+    public class NegativeDescriminantException : KumachevException
     {
         public NegativeDescriminantException()
         {

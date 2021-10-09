@@ -7,6 +7,7 @@ namespace Lab3.Kumachev
 {
     public class LinearEquation
     {
+        protected LogInterface logger = KumachevLog.I();
         protected List<float> x = new List<float>();
         public List<float> X => x.Select(r => r).ToList();
 
@@ -15,6 +16,7 @@ namespace Lab3.Kumachev
             if (a == 0)
                 throw new NotAnEquationException("A = 0");
 
+            logger.Log("LinearEquation: Определено, что это линейное уравнение");
             x.Clear();
             x.Add(-b / a);
             return X;

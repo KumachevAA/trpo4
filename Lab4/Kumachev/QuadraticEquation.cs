@@ -16,10 +16,11 @@ namespace Lab3.Kumachev
         {
             if (a == 0)
             {
-                Solve(a, b);
+                Solve(b, c);
                 return X;
             }
 
+            logger.Log("QuadraticEquation: Определено, что это квадратное уравнение");
             float d = D(a, b, c);
 
             if (d < 0)

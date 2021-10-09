@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Lab.core;
+using Lab2.Exceptions;
+using Lab3.Kumachev;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lab3
 {
@@ -10,6 +10,50 @@ namespace Lab3
     {
         static void Main(string[] args)
         {
+            LogInterface logger = KumachevLog.I();
+            logger.Log("Program: Ввод 3 параметров");
+
+            if (!float.TryParse(Console.ReadLine(), out float a))
+            {
+                logger.Log("Введено не число");
+                return;
+            }
+
+            if (!float.TryParse(Console.ReadLine(), out float b))
+            {
+                logger.Log("Введено не число");
+                return;
+            }
+
+            if (!float.TryParse(Console.ReadLine(), out float c))
+            {
+                logger.Log("Введено не число");
+                return;
+            }
+
+            logger.Log($"Program: Получено уравнение {a}*x^2 + {b}*x + {c} = 0");
+            EquationInterface equation = new QuadraticEquation();
+
+            try
+            {
+                List<float> roots = equation.Solve(a, b, c);
+                string rootsString = string.Join(", ", roots.ToArray());
+                logger.Log($"Program: Корни уравнения: {rootsString}");
+            }
+            catch (KumachevException exception)
+            {
+                if (exception is NotAnEquationException)
+                    logger.Log("Program: определено, что такое уравнение не существует");
+
+                if (exception is NegativeDescriminantException)
+                    logger.Log("Program: Ошибка - уравнение не имеет корней");
+            }
+            finally
+            {
+                logger.Write();
+            }
+
+            Console.ReadKey();
         }
     }
 }
