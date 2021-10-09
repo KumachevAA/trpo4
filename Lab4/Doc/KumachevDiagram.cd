@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Lab3.Kumachev.KumachevLog">
+    <Position X="4.25" Y="3" Width="1.5" />
+    <Members>
+      <Field Name="instance" Hidden="true" />
+      <Method Name="KumachevLog" Hidden="true" />
+      <Field Name="logs" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAhAAAAAAAAAACEAAAA=</HashCode>
+      <FileName>Kumachev\KumachevLog.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lab3.Kumachev.LinearEquation">
+    <Position X="2.25" Y="1.75" Width="1.5" />
+    <Members>
+      <Field Name="logger" Hidden="true" />
+      <Field Name="x" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAIAAAAAAAAAABAAAAAQAA=</HashCode>
+      <FileName>Kumachev\LinearEquation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab3.Kumachev.QuadraticEquation">
+    <Position X="2.25" Y="4.25" Width="1.5" />
+    <Members>
+      <Method Name="D" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Kumachev\QuadraticEquation.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Lab.core.LogAbstract">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\LogAbstract.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab2.Exceptions.KumachevException" Collapsed="true">
+    <Position X="6.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Exceptions\KumachevException.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Lab.core.EquationInterface">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\EquationInterface.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Lab.core.LogInterface">
+    <Position X="6.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Core\LogInterface.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
